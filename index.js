@@ -4,6 +4,8 @@ const app = express();
 const port = 3000;
 
 var jsonParser = bodyParser.json();
+app.use(bodyParser.json({ limit: "20mb" }));
+app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 
 app.post("/pdf-to-image", jsonParser, async (req, res) => {
   const { fromBase64 } = require("pdf2pic");
