@@ -18,7 +18,7 @@ app.post("/pdf-to-image", jsonParser, async (req, res) => {
   }
 
   const options = {
-    density: 100,
+    density: 330,
     format: "jpg",
     width: 2000,
     height: 3000,
