@@ -20,8 +20,8 @@ app.post("/pdf-to-image", jsonParser, async (req, res) => {
   const options = {
     density: 720,
     format: "jpg",
-    width: 2000,
-    height: 3000,
+    width: 900,
+    height: 1350,
   };
 
   const convert = fromBase64(pdf, options);
